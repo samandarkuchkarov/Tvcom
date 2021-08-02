@@ -6,6 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import Home from './pages/Home'
 import {BurgerMenu} from './components/BurgerMenu'
 import {ContextProvider, Datas} from './context/context'
+import Video from './pages/Video'
 import {
   SafeAreaView,
   ScrollView,
@@ -26,6 +27,7 @@ function stack({ navigation }) {
   return (
       <Stack.Navigator>
         <Stack.Screen  options={createOption(navigation,"Home")} name="Home"  component={Home} />
+        <Stack.Screen  options={createOption(navigation,"Home")} name="Video"  component={Video} />
       </Stack.Navigator>
   );
 }
@@ -34,7 +36,7 @@ const App = () => {
 
   return (
     <><ContextProvider>
-      <StatusBar barStyle='dark-content' />
+      <StatusBar />
       <NavigationContainer>
         <Drawer.Navigator drawerContent={props =>(<BurgerMenu {...props}/>)} >
           <Drawer.Screen  name="BurgerNavigation" component={stack} />

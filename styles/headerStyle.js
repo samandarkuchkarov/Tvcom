@@ -2,7 +2,7 @@ import { StyleSheet,} from 'react-native';
 
 const headerBlock = StyleSheet.create({
    header: {
-       backgroundColor: '#1C1C1C',
+       backgroundColor: '#fff',
     },
     headerLink:{
         color:'#fff',

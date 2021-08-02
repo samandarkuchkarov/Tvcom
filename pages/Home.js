@@ -1,16 +1,20 @@
 import React from 'react'
-import {View,StyleSheet} from 'react-native'
+import {View,StyleSheet,Text} from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler';
+import BigCardCarusel from '../components/BigCardCarusel'
 
 export default function Home({navigation}){
     //navigation.openDrawer()
     return(
-        <View style={styles.container}></View>
+        <ScrollView style={styles.container}>
+           <BigCardCarusel navigation={navigation}/>
+        </ScrollView>
     )
 }
 
 const styles = StyleSheet.create({
  container:{
-     flex:1,
-     backgroundColor:'#fff'
+     height:100,
+     backgroundColor:'white'
  }
 });
